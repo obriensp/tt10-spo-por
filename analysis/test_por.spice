@@ -1,0 +1,26 @@
+* testing schematic por
+
+V1 vdd GND PWL(0u 0.0 100u 0.0 500u {VDD})
+V2 vss GND 0.0
+
+*.subckt por VDD VSS reset_b
+x1 net_measured_vdd vss reset_b por
+
+* measure current consumed
+Vmeas vdd net_measured_vdd 0
+.save i(vmeas)
+
+.include prefix.spice
+.include ../../../xschem/simulation/por.spice
+
+*.option savecurrents
+.control
+  save all
+  tran 50n 2m
+  wrdata out/current.txt vmeas#branch
+  wrdata out/reset_b.txt reset_b
+  quit
+.endc
+
+.global GND
+.end
