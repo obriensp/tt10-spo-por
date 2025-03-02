@@ -1,0 +1,13 @@
+** sch_path: /home/sean/Development/HDL/tt10-spo-por/xschem/single_stage_por.sch
+.subckt single_stage_por VDD VSS reset_b
+*.PININFO VDD:I VSS:I reset_b:O
+XM5 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8_hvt L=0.5 W=5 nf=2 m=1
+XM7 net1 gate VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=2.5 nf=1 m=1
+XR1 gate VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=600 mult=1 m=1
+XR2 VSS gate VSS sky130_fd_pr__res_xhigh_po_0p69 L=100 mult=1 m=1
+XM1 cap net1 VDD VDD sky130_fd_pr__pfet_01v8_hvt L=0.5 W=2.5 nf=1 m=1
+XC1 cap VSS sky130_fd_pr__cap_mim_m3_1 W=30 L=30 m=1
+x1 cap VSS VSS VDD VDD net2 sky130_fd_sc_hd__inv_1
+x2 net2 VSS VSS VDD VDD reset_b sky130_fd_sc_hd__inv_2
+.ends
+.end

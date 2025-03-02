@@ -26,10 +26,11 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-digital=0}
+digital=0
+hilight_wave=-1}
 B 2 1230 20 2030 420 {flags=graph
 y1=0
-y2=4.4e-06
+y2=0.00018
 ypos1=0
 ypos2=2
 divy=5
@@ -50,7 +51,7 @@ logy=0
 }
 B 2 1230 440 2030 840 {flags=graph
 y1=0
-y2=7.8e-06
+y2=0.00024
 ypos1=0
 ypos2=2
 divy=5
@@ -69,6 +70,51 @@ unitx=1
 logx=0
 logy=0
 }
+B 2 410 440 1210 840 {flags=graph
+y1=0
+y2=1.8
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=0.005
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+color="20 21"
+node="vdd
+x1.cap"}
+B 2 2060 20 2860 420 {flags=graph
+y1=0
+y2=1.8e-09
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=0.005
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="i(@m.x1.xm11.msky130_fd_pr__pfet_01v8[id])
+i(@m.x1.xm11.msky130_fd_pr__pfet_01v8_hvt[id])"
+color="21 21"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
 C {devices/code.sym} -200 -440 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -82,7 +128,7 @@ spice_ignore=false}
 C {devices/launcher.sym} -190 -110 0 0 {name=h17 
 descr="Load waves" 
 tclcommand="
-xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
+xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw  tran
 
 "
 }
@@ -104,6 +150,7 @@ op
 remzerovec
 write por_tb.raw
 
+set appendwrite
 
 tran 50n 5m
 write por_tb.raw

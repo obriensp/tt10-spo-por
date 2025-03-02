@@ -3,20 +3,20 @@
 V1 vdd GND PWL(0u 0.0 100u 0.0 500u {VDD})
 V2 vss GND 0.0
 
-*.subckt por VDD VSS reset_b
-x1 net_measured_vdd vss reset_b por
+*.subckt single_stage_por VDD VSS reset_b
+x1 net_measured_vdd vss reset_b single_stage_por
 
 * measure current consumed
 Vmeas vdd net_measured_vdd 0
 .save i(vmeas)
 
 .include prefix.spice
-.include ../../../xschem/simulation/por.spice
+.include ../../../xschem/simulation/single_stage_por.spice
 
 *.option savecurrents
 .control
   save all
-  tran 50n 2m
+  tran 500n 10m
   wrdata out/current.txt vmeas#branch
   wrdata out/reset_b.txt reset_b
   quit
