@@ -90,12 +90,12 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 160 -210 0 0 {name=R1
-L=600
+L=342
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 160 -150 0 0 {name=R2
-L=100
+L=57
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
@@ -114,10 +114,10 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_hvt
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 580 -180 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 580 -180 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=25.31 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 670 -210 1 0 {name=p6 sig_type=std_logic lab=cap}
-C {sky130_stdcells/inv_1.sym} 780 -210 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_2.sym} 860 -210 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_2.sym} 780 -210 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} 110 -430 0 0 {name=p2 lab=VDD}
 C {devices/ipin.sym} 110 -50 0 0 {name=p5 lab=VSS}
-C {devices/opin.sym} 900 -210 0 0 {name=p7 lab=reset_b}
+C {devices/opin.sym} 820 -210 0 0 {name=p7 lab=reset_b}
+C {sky130_stdcells/tapvpwrvgnd_1.sym} 780 -130 0 0 {name=x1 VGND=vss VPWR=vdd prefix=sky130_fd_sc_hd__ }
