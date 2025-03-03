@@ -6,7 +6,7 @@ XM7 net1 gate VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=2.5 nf=1 m=1
 XR1 gate VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=342 mult=1 m=1
 XR2 VSS gate VSS sky130_fd_pr__res_xhigh_po_0p69 L=57 mult=1 m=1
 XM1 cap net1 VDD VDD sky130_fd_pr__pfet_01v8_hvt L=0.5 W=2.5 nf=1 m=1
-XC1 cap VSS sky130_fd_pr__cap_mim_m3_1 W=30 L=25.31 m=1
+XC1 cap VSS sky130_fd_pr__cap_mim_m3_1 W=23.85 L=30 m=1
 x2 cap VSS VSS VDD VDD reset_b sky130_fd_sc_hd__buf_2
 x1 vss vdd sky130_fd_sc_hd__tapvpwrvgnd_1
 .ends

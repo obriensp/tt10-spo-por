@@ -265,7 +265,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_hvt
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1010 -200 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=25.31 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1010 -200 0 0 {name=C1 model=cap_mim_m3_1 W=23.85 L=30 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 1100 -230 1 0 {name=p6 sig_type=std_logic lab=cap}
 C {devices/opin.sym} 1250 -230 0 0 {name=p7 lab=reset_b}
 C {sky130_stdcells/buf_2.sym} 1210 -230 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }

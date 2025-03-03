@@ -1,0 +1,43 @@
+MACRO single_stage_por
+  CLASS BLOCK ;
+  FOREIGN single_stage_por ;
+  ORIGIN 0.510 -12.230 ;
+  SIZE 32.860 BY 29.850 ;
+  PIN VDD
+    ANTENNADIFFAREA 7.296550 ;
+    PORT
+      LAYER met4 ;
+        RECT -0.465 40.525 32.305 42.035 ;
+    END
+  END VDD
+  PIN VSS
+    ANTENNADIFFAREA 20.053900 ;
+    PORT
+      LAYER met4 ;
+        RECT -0.465 12.275 32.305 13.785 ;
+    END
+  END VSS
+  PIN reset_b
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met4 ;
+        RECT 31.350 27.005 32.350 27.305 ;
+    END
+  END reset_b
+  OBS
+      LAYER li1 ;
+        RECT -0.280 14.460 31.800 39.850 ;
+      LAYER met1 ;
+        RECT -0.510 12.280 32.350 42.030 ;
+      LAYER met2 ;
+        RECT -0.460 12.230 32.300 42.080 ;
+      LAYER met3 ;
+        RECT -0.510 12.255 32.350 42.055 ;
+      LAYER met4 ;
+        RECT -0.400 27.705 31.775 39.600 ;
+        RECT -0.400 26.605 30.950 27.705 ;
+        RECT -0.400 14.185 31.775 26.605 ;
+  END
+END single_stage_por
+END LIBRARY
+
